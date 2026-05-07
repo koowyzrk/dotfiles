@@ -1,0 +1,160 @@
+// -*- mode: jsonc -*-
+{
+  "output": [
+    "HDMI-A-1",
+    "eDP-1"
+  ],
+  "class": "common-bar",
+  "layer": "top",
+  "height": 30,
+  "margin-left": 10,
+  "margin-right": 10,
+  "spacing": 0,
+  "modules-left": [
+    "clock",
+    "pulseaudio",
+    "custom/updates"
+  ],
+  "modules-center": [
+    "hyprland/workspaces",
+  ],
+  "modules-right": [
+    "tray",
+    "disk",
+    "cpu",
+    "memory",
+    "network",
+    "backlight",
+    "battery",
+    "battery#bat2",
+    "custom/exit",
+  ],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10
+  },
+  "pulseaudio": {
+    "format": "{format_source} {icon}  {volume}%",
+    "format-muted": "{format_source}  ",
+    "format-source": "",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": " ",
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol",
+    "on-click-right": "~/.config/scripts/micro.sh",
+    "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+  "custom/updates": {
+    "format": "{}",
+    "exec": "~/.config/scripts/updates",
+    "interval": 1200,
+    "tooltip": false,
+    "tooltip-format": "updates",
+  },
+  "network": {
+    "format-wifi": "󰤨  {essid}",
+    "format-ethernet": "󰈀",
+    "tooltip-format": "󰈀  {ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "format-linked": "󰈀  {ifname} (No IP)",
+    "format-disconnected": "  Disconnected",
+    "format-alt": "󰤨  {signalStrength}%",
+    "interval": 5,
+    "on-click-right": "alacritty -o font.size=10 --class nmtui -e nmtui"
+  },
+  "disk": {
+    "interval": 2,
+    "format": "󰋊  {percentage_used}% ({free})",
+    "path": "/",
+    "tooltip": false
+  },
+  "cpu": {
+    "interval": 2,
+    "format": " 󰍛  {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "interval": 2,
+    "format": " 󰾆  {}%",
+    "tooltip": false,
+    "tooltip-format": "  {used:0.1f}GB/{total:0.1f}GB"
+  },
+  "backlight": {
+    "format": "{icon}  {percent}%",
+    "scroll-step": 5,
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "🗲 {capacity}% ",
+    "format-plugged": " {capacity}% ",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "battery#bat2": {
+    "bat": "BAT2"
+  },
+  "clock": {
+    "format": "{:%R 󰃭  %d-%m-%y}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "custom/exit": {
+    "format": "",
+    "on-click": "wlogout -b 4 --layout ~/.config/wlogout/layout --css ~/.config/wlogout/style.css",
+    "tooltip-format": "Power Menu"
+  },
+}

@@ -1,0 +1,39 @@
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+}
+
+window {
+	background-color: rgba(22, 25, 37, 0.9);
+}
+
+button {
+  /*color: #1E1E1E;*/
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+}
+
+button:active, button:hover {
+	background-color: #1E1E1E;
+	/*background-color: #000000;*/
+	outline-style: none;
+}
+
+#lock {
+    background-image: image(url("$HOME/.config/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("$HOME/.config/wlogout/icons/logout.png"));
+}
+
+#shutdown {
+    background-image: image(url("$HOME/.config/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("$HOME/.config/wlogout/icons/reboot.png"));
+}

@@ -1,0 +1,221 @@
+@define-color background #252626;
+@define-color hover #F2F4F3;
+@define-color foreground #FAF0C6;
+@define-color alert #f53c3c;
+@define-color bg rgba(22, 25, 37, 0.9);
+
+*{
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+}
+
+/* .left { */
+/*     font-size: 12px; */
+/*     min-height: 15px; */
+/* } */
+/**/
+/* .right { */
+/*     font-size: 21px; */
+/*     min-height: 25px; */
+/* } */
+
+#waybar {
+    background: transparent;
+    color: @foreground;
+}
+
+#waybar.HDMI-A-1 {
+    font-size: 12px;
+    min-height: 30px;
+}
+
+#waybar.eDP-1 {
+    font-size: 21px;
+    min-height: 50px;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px @foreground;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover,
+#clock:hover,
+#network:hover {
+    background-color: @foreground;
+    color: @background;
+}
+
+#custom-exit:hover {
+    color: @hover;
+}
+
+#workspaces button {
+    border-radius: 20px;
+    background-color: transparent;
+    color: @foreground;
+}
+#workspaces button.active{
+    border-radius: 20px;
+    background: @bg; 
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.left #workspaces button{
+    color: @foreground;
+}
+
+.left #workspaces button.active{
+    color: @foreground;
+    background: @bg; 
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#network,
+#pulseaudio,
+#custom-updates,
+#tray{
+    background-color: @bg;
+    color: @foreground;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 5px;
+  }
+
+#workspaces {
+    border-radius: 20px;
+    margin: 0 0px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+/* =============================== */
+/* pulse module */
+#pulseaudio {
+    margin-right: 3px;
+    padding-right: 15px;
+}
+
+#pulseaudio.muted {
+    margin-right: 0px;
+    background-color: @foreground;
+    color: @background;
+}
+
+/* =============================== */
+/* updates */
+#custom-updates{
+    color: @background;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: transparent;
+}
+
+/* =============================== */
+/* network module */
+#network {
+    padding-left: 10px;
+}
+
+#network.disconnected {
+    padding-right: 13px;
+    margin-left: 10px;
+    background-color: @alert;
+}
+
+/* =============================== */
+/*system monitoring module*/
+#disk {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 0px;
+    padding-right: 2px;
+}
+
+#cpu {
+    border-radius: 0px;
+    margin-right: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#memory {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 2px;
+    padding-right: 1rem;
+}
+
+/* =============================== */
+/* backlight */
+#backlight{
+    color: @background;
+  margin-right: 5px;
+}
+
+/* =============================== */
+/* battery module */
+#battery {
+    /*background-color: #ffffff;*/
+    /*color: #458588;*/
+}
+
+#battery.charging, #battery.plugged {
+    color: @foreground;
+}
+
+@keyframes blink {
+    to {
+        color: @foreground;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: @foreground;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* =============================== */
+/* clock module */
+#clock {
+}
+
+/* =============================== */
+/* exit module */
+#custom-exit{
+    color: @background;
+   padding-left: 5px;
+   padding-right: 15px;
+}
