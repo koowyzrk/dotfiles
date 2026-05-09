@@ -1,0 +1,4 @@
+#!/bin/bash
+
+killall wofi 2&>/dev/null
+wofi -c ~/.config/wofi/config -s ~/.config/wofi/style.css 

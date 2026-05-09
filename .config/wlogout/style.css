@@ -23,17 +23,17 @@ button:active, button:hover {
 }
 
 #lock {
-    background-image: image(url("$HOME/.config/wlogout/icons/lock.png"));
+    background-image: image(url("./icons/lock.png"));
 }
 
 #logout {
-    background-image: image(url("$HOME/.config/wlogout/icons/logout.png"));
+    background-image: image(url("./icons/logout.png"));
 }
 
 #shutdown {
-    background-image: image(url("$HOME/.config/wlogout/icons/shutdown.png"));
+    background-image: image(url("./icons/shutdown.png"));
 }
 
 #reboot {
-    background-image: image(url("$HOME/.config/wlogout/icons/reboot.png"));
-}
+    background-image: image(url("./icons/reboot.png"));
+  }

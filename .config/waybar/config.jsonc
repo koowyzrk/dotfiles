@@ -52,6 +52,7 @@
       ]
     },
     "on-click": "pavucontrol",
+    // "on-click": "~/.config/scripts/pulse-hover.sh",
     "on-click-right": "~/.config/scripts/micro.sh",
     "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
@@ -65,12 +66,12 @@
   "network": {
     "format-wifi": "󰤨  {essid}",
     "format-ethernet": "󰈀",
-    "tooltip-format": "󰈀  {ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "tooltip-format": "󰈀  {ipaddr}   {bandwidthUpBytes}   {bandwidthDownBytes}",
     "format-linked": "󰈀  {ifname} (No IP)",
     "format-disconnected": "  Disconnected",
-    "format-alt": "󰤨  {signalStrength}%",
+    // "format-alt": "󰤨  {signalStrength}%",
     "interval": 5,
-    "on-click-right": "alacritty -o font.size=10 --class nmtui -e nmtui"
+    "on-click": "alacritty -o font.size=10 --class nmtui -e nmtui"
   },
   "disk": {
     "interval": 2,
