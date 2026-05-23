@@ -43,3 +43,48 @@ hl.window_rule({
 	size = { 800, 800 },
 	center = true,
 })
+hl.window_rule({
+	name = "org.kde.dolphin",
+	match = { class = "org.kde.dolphin" },
+	float = true,
+	size = { 1000, 800 },
+	center = true,
+})
+hl.window_rule({
+	name = "org.gnome.Nautilus",
+	match = { class = "org.gnome.Nautilus" },
+	float = true,
+	size = { 1000, 800 },
+	center = true,
+})
+hl.window_rule({
+	name = "imv",
+	match = { class = "imv" },
+	float = true,
+	-- size = { 1000, 800 },
+	center = true,
+})
+hl.window_rule({
+	name = "mpv",
+	match = { class = "mpv" },
+	float = true,
+	size = { 1000, 800 },
+	center = true,
+})
+
+-- rydz engine
+-- rydz_ecs 3D Demo
+hl.window_rule({
+	name = "Rydz Tools",
+	match = { class = "Tk" },
+	float = true,
+	size = { 800, 800 },
+	center = true,
+})
+hl.window_rule({
+	name = "rydz_ecs 3D Demo",
+	match = { class = "rydz_ecs 3D Demo" },
+	float = true,
+	-- size = { 800, 800 },
+	center = true,
+})
