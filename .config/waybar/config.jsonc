@@ -39,7 +39,7 @@
     "spacing": 10
   },
   "pulseaudio": {
-    "format": "{format_source} {icon}  {volume}%",
+    "format": "{format_source} {icon} {volume}%",
     "format-muted": "{format_source}  ",
     "format-source": "",
     "format-source-muted": " ",
@@ -64,34 +64,34 @@
     "tooltip-format": "updates",
   },
   "network": {
-    "format-wifi": "󰤨  {essid}",
+    "format-wifi": "󰤨 {essid}",
     "format-ethernet": "󰈀",
-    "tooltip-format": "󰈀  {ipaddr}   {bandwidthUpBytes}   {bandwidthDownBytes}",
-    "format-linked": "󰈀  {ifname} (No IP)",
-    "format-disconnected": "  Disconnected",
+    "tooltip-format": "󰈀 {ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-disconnected": " Disconnected",
     // "format-alt": "󰤨  {signalStrength}%",
     "interval": 5,
     "on-click": "alacritty -o font.size=10 --class nmtui -e nmtui"
   },
   "disk": {
     "interval": 2,
-    "format": "󰋊  {percentage_used}% ({free})",
+    "format": "󰋊 {percentage_used}%({free}) ",
     "path": "/",
     "tooltip": false
   },
   "cpu": {
     "interval": 2,
-    "format": " 󰍛  {usage}%",
+    "format": "󰍛 {usage}% ",
     "tooltip": false
   },
   "memory": {
     "interval": 2,
-    "format": " 󰾆  {}%",
+    "format": "󰾆 {}%",
     "tooltip": false,
-    "tooltip-format": "  {used:0.1f}GB/{total:0.1f}GB"
+    "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
   },
   "backlight": {
-    "format": "{icon}  {percent}%",
+    "format": "{icon} {percent}%",
     "scroll-step": 5,
     "format-icons": [
       "",
@@ -132,7 +132,7 @@
     "bat": "BAT2"
   },
   "clock": {
-    "format": "{:%R 󰃭  %d-%m-%y}",
+    "format": "{:%R 󰃭 %d-%m-%y}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",

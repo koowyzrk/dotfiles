@@ -7,7 +7,9 @@
 *{
     border: none;
     border-radius: 0px;
-    font-family: "JetBrainsMono Nerd Font";
+    /* font-family: "JetBrainsMono Nerd Font"; */
+    /* font-family: "NotoSans Nerd Font"; */
+    /* font-family: "FiraCode Nerd Font"; */
     font-weight: bold;
 }
 

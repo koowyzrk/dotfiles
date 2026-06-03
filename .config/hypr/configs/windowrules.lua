@@ -7,6 +7,12 @@ local suppressMaximizeRule = hl.window_rule({
 suppressMaximizeRule:set_enabled(true)
 
 hl.window_rule({
+	name = "kitty",
+	match = { class = "kitty-special" },
+	workspace = "special:magic",
+})
+
+hl.window_rule({
 	name = "godot",
 	match = { class = "Godot", title = "Godot" },
 	tile = true,

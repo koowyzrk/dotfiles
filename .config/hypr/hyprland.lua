@@ -23,7 +23,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("hpr-scratcher")
 	hl.exec_cmd("swaync")
-	hl.exec_cmd("kitty")
+	hl.exec_cmd("kitty --class kitty-special")
 end)
 
 --- ENVIRONMENT VARIABLES ---
