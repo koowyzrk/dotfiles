@@ -135,7 +135,8 @@ button:hover {
 /* =============================== */
 /* updates */
 #custom-updates{
-    color: @background;
+    /* color: @background; */
+    color: @foreground;
     margin-left: 0px;
     margin-right: 0px;
     background-color: transparent;
@@ -179,8 +180,9 @@ button:hover {
 /* =============================== */
 /* backlight */
 #backlight{
-    color: @background;
-  margin-right: 5px;
+    color: @foreground;
+    /* color: @background; */
+    margin-right: 5px;
 }
 
 /* =============================== */
@@ -217,7 +219,8 @@ button:hover {
 /* =============================== */
 /* exit module */
 #custom-exit{
-    color: @background;
-   padding-left: 5px;
-   padding-right: 15px;
+    color: @foreground;
+    /* color: @background; */
+    padding-left: 5px;
+    padding-right: 15px;
 }

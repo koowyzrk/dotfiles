@@ -77,6 +77,13 @@ hl.window_rule({
 	size = { 1000, 800 },
 	center = true,
 })
+hl.window_rule({
+	name = "steam",
+	match = { class = "steam", title = "Friends List" },
+	float = true,
+	size = { 600, 800 },
+	center = true,
+})
 
 -- rydz engine
 -- rydz_ecs 3D Demo
@@ -89,7 +96,7 @@ hl.window_rule({
 })
 hl.window_rule({
 	name = "rydz_ecs 3D Demo",
-	match = { class = "rydz_ecs 3D Demo" },
+	match = { class = "main", title = "rydz_ecs 3D Demo" },
 	float = true,
 	-- size = { 800, 800 },
 	center = true,

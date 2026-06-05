@@ -17,7 +17,7 @@ return {
           cmd = {
             "clangd",
             "--background-index",
-            "-j=2",
+            "-j=4",
             "--limit-references=100",
             "--limit-results=100",
             "--header-insertion-decorators=false",
